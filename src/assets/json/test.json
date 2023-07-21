@@ -1,0 +1,58 @@
+{
+  "pageName": "Sales Page",
+  "urlExtension": "/sales",
+  "domElements": {
+    "Sales filter": {
+      "id": "scr-sales-01-filter-button"
+    },
+    "Sales filter option list": {
+      "id": "scr-sales-01-filter"
+    },
+    "salesSearchField": {
+      "id": "scr-sales-01-search",
+      "xpath": "//*[@id='scr-sales-01-search']"
+    },
+    "Total Outstanding chart": {
+      "id": "scr-sales-01-chart-label"
+    },
+    "0-30 days past due chart": {
+      "id": "scr-sales-02-chart-label"
+    },
+    "30-60 days past due chart": {
+      "id": "scr-sales-03-chart-label"
+    },
+    "60+ days past due chart": {
+      "id": "scr-sales-04-chart-label"
+    },
+    "New Invoice button": {
+      "id": "scr-sales-01-new-invoice"
+    },
+    "Receive Payment button": {
+      "id": "scr-sales-01-new-payment"
+    },
+    "Receive Single Payment button": {
+      "id": "scr-sales-01-new-payment-common"
+    },
+    "Receive Multiple Payment button": {
+      "id": "scr-sales-01-new-multiple-payment"
+    },
+    "Provide Quote button": {
+      "id": "scr-sales-01-new-quote"
+    },
+    "Sales list view": {
+      "id": "scr-sales-01-list-view"
+    },
+    "Reconcile OK button": {
+      "id": "global-information-window-ok-button"
+    },
+    "salesFirstGrid": {
+      "xpath": "//div[@id='scr-sales-01-list-view']/div[1]"
+    },
+    "invoiceOweFirstGrid": {
+      "xpath": "//div[@id='scr-sales-01-list-view']/div[1]/div[2]/div[4]/div/span"
+    },
+    "Invoice Claim No First Grid": {
+      "xpath": "//div[@id='scr-sales-01-list-view']/div/div[2]/div[1]/div[3]/span/a"
+    }
+  }
+}
