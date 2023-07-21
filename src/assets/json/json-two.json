@@ -1,0 +1,597 @@
+{
+    "pageName": "Multiple Invoice Detail Popup",
+    "title": "",
+    "urlExtension": "/",
+    "keyDomElementName": "Multiple Invoice Main view",
+    "domElements":
+    {
+        "Multiple Invoice Main view":
+        {
+            "id": "MRPopupWindowscr-account-multiple-invoice-new"
+        },
+
+        "Multiple Invoice Patient field":
+        {
+            "xpath": "//*[@name = 'Patient Selected']"
+        },
+
+        "Multiple Invoice Bill to dropdown":
+        {
+            "id": "scr-multiple-invoice-new-bill-to"
+        },
+
+        "Multiple Detail Bill to Medicare":
+        {
+            "xpath": "//input[@id='scr-multiple-invoice-new-bill-to']/parent::span//span[contains(text(),'Medicare')]"
+        },
+
+        "Multiple Invoice Provider":
+        {
+            "xpath": "//select[@id='scr-multiple-invoice-new-provider']//ancestor::div[contains(@class, 'mr-multiselect-wrapper')]//descendant::*[contains(@class,'k-input')]"
+        },
+
+        "Multiple Invoice Provider autocomplete":
+        {
+            "id": "scr-multiple-invoice-new-provider_listbox"
+        },
+
+        "Multiple Invoice Schedule dropdown":
+        {
+            "id": "scr-multiple-invoice-new-schedule"
+        },
+
+        "Multiple Detail Schedule MBS":
+        {
+            "xpath": "//input[@id='scr-multiple-invoice-new-schedule']/parent::span//span[contains(text(),'MBS')]"
+        },
+       
+	   "Multiple Invoice Date datepick":
+        {
+            "id": "scr-multiple-invoice-new-invoice-date"
+        },
+
+        "Multiple Invoice Terms dropdown":
+        {
+            "id": "scr-multiple-invoice-new-terms"
+        },
+
+        "Multiple Detail Terms 14 Days":
+        {
+            "xpath": "//input[@id='scr-multiple-invoice-new-terms']/parent::span//span[contains(text(),'14 Days')]"
+        },
+
+        "Multiple Invoice Due Date datepick":
+        {
+            "id": "scr-multiple-invoice-new-due-date"
+        },
+
+        "Multiple Invoice Detail Total items":
+        {
+            "xpath": "//span[@data-bind='text: totalValidInvoiceItem']"
+        },
+
+        "Multiple Invoice New Detailed Item button":
+        {
+            "id": "scr-multiple-invoice-new-detailed-item"
+        },
+
+        "Multiple Invoice Item Date datepick 1":
+        {
+            "xpath":  "//*[@id='MRPopupWindowscr-account-multiple-invoice-new']/descendant-or-self::*[contains(normalize-space(@id), 'scr-multiple-invoice-item-date')][1]"
+        },
+
+        "Multiple Invoice Item Number field 1":
+        {
+            "xpath":  "//*[@id='MRPopupWindowscr-account-multiple-invoice-new']/descendant-or-self::*[contains(normalize-space(@id), 'scr-multiple-invoice-item-no') and contains(@name, 'Item Code') and not(@disable)][1]"
+        },
+
+        "Multiple Invoice Item Number field 1 autocomplete":
+        {
+            "xpath": "//ul[@aria-hidden = 'false' and contains(@id, 'scr-multiple-invoice-item-no')]"
+        },
+
+        "Multiple Invoice Item Description field 1":
+        {
+            "xpath":  "//*[@id='MRPopupWindowscr-account-multiple-invoice-new']/descendant-or-self::*[contains(normalize-space(@id), 'scr-multiple-invoice-item-desc')][1]"
+        },
+		
+		"Multiple Invoice Item Fee Type dropdown 1":
+        {
+            "xpath":  "//*[@id='MRPopupWindowscr-account-multiple-invoice-new']/descendant-or-self::*[contains(normalize-space(@id), 'scr-multiple-invoice-item-fee-type')][1]"
+        },
+
+        "Multiple Invoice Item Quantity field 1":
+        {
+            "xpath":  "//*[@id='MRPopupWindowscr-account-multiple-invoice-new']/descendant-or-self::*[contains(normalize-space(@id), 'scr-multiple-invoice-item-qty')][1]"
+        },
+
+        "Multiple Invoice Item Quantity field 1 value":
+        {
+            "xpath":  "//*[@id='MRPopupWindowscr-account-multiple-invoice-new']/descendant-or-self::*[contains(normalize-space(@id), 'scr-multiple-invoice-item-qty')][2]/preceding-sibling::input"
+        },
+
+        "Multiple Invoice Item Patients Number field 1":
+        {
+            "xpath":  "//*[@id='MRPopupWindowscr-account-multiple-invoice-new']/descendant-or-self::*[contains(normalize-space(@id), 'scr-multiple-invoice-item-no-of-patients')][1]"
+        },
+
+        "Multiple Invoice Item Rate field 1":
+        {
+            "xpath":  "//*[@id='MRPopupWindowscr-account-multiple-invoice-new']/descendant-or-self::*[contains(normalize-space(@id), 'scr-multiple-invoice-item-rate')][1]"
+        },
+
+        "Multiple Invoice Item Amount field 1":
+        {
+            "xpath":  "//*[@id='MRPopupWindowscr-account-multiple-invoice-new']/descendant-or-self::*[contains(normalize-space(@id), 'scr-multiple-invoice-item-amount')][1]"
+        },
+
+        "Multiple Invoice Item Tax Type dropdown 1":
+        {
+            "xpath":  "//*[@id='MRPopupWindowscr-account-multiple-invoice-new']/descendant-or-self::*[contains(normalize-space(@id), 'scr-multiple-invoice-item-tax-type')][1]"
+        },
+
+        "Multiple Invoice Item 1":
+        {
+            "xpath": "//*/tr[not(contains(@style,'display: none'))][1]/descendant::div[@class='row-numbering-container hide-on-hover']"
+        },
+
+        "Multiple Invoice Item Edit 1":
+        {
+            "xpath":  "//*/tr[not(contains(@style,'display: none'))][1]/td/div/div[@class='mr-custom-icon' and contains(@data-bind,'editDetailedItem')]"
+        },
+
+        "Multiple Invoice Item Total text 1":
+        {
+            "xpath":  "//*[@id='MRPopupWindowscr-account-multiple-invoice-new']/descendant-or-self::*[contains(normalize-space(@data-bind), 'totalAmountStr')][1]"
+        },
+
+        "Multiple Invoice Add Item button":
+        {
+            "id": "scr-multiple-invoice-new-add-item"
+        },
+
+        "Multiple Invoice Description field":
+        {
+            "id": "scr-multiple-invoice-new-description"
+        },
+
+        "Multiple Invoice Print Medicare Claim checkbox":
+        {
+            "id": "scr-multiple-invoice-new-print-medicare-claim"
+        },
+
+        "Multiple Invoice Sub Total text":
+        {
+            "xpath":  "//*[@id='MRPopupWindowscr-account-multiple-invoice-new']/descendant-or-self::*[contains(normalize-space(@data-bind), 'invoiceAmount')]"
+        },
+
+        "Multiple Invoice GST text":
+        {
+            "xpath":  "//*[@id='MRPopupWindowscr-account-multiple-invoice-new']/descendant-or-self::*[contains(normalize-space(@data-bind), 'invoiceTaxAmount')]"
+        },
+
+        "Multiple Invoice Total text":
+        {
+            "xpath":  "//*[@id='MRPopupWindowscr-account-multiple-invoice-new']/descendant-or-self::*[contains(normalize-space(@data-bind), 'invoiceTotalAmount')]"
+        },
+
+        "Multiple Invoice GAP text":
+        {
+            "xpath":  "//*[@id='MRPopupWindowscr-account-multiple-invoice-new']/descendant-or-self::*[contains(normalize-space(@data-bind), 'invoiceGapAmount')]"
+        },
+
+        "Multiple Invoice Cancel button":
+        {
+            "id": "scr-multiple-invoice-new-cancel"
+        },
+
+        "Multiple Invoice Print button":
+        {
+            "id": "scr-multiple-invoice-new-print-button"
+        },
+        
+        "Multiple Invoice Claim button":
+        {
+            "id": "scr-multiple-invoice-new-claim-button"
+        },
+
+        "Multiple Invoice Hold button":
+        {
+            "id": "scr-multiple-invoice-new-hold-button"
+        },
+
+        "Multiple Invoice Quick Pay button":
+        {
+            "id": "scr-multiple-invoice-new-quick-pay-button"
+        },
+        
+        "Multiple Invoice Online Patient Claiming checkbox":
+        {
+            "id": "scr-multiple-invoice-online-patient-claiming-checkbox"
+        },
+        
+        "Multiple Invoice Full Amount checkbox":
+        {
+            "id": "scr-multiple-invoice-full-amount-payment-radio-button"
+        },
+        
+        "Multiple Invoice GAP Amount checkbox":
+        {
+            "id": "scr-multiple-invoice-gap-amount-payment-radio-button"
+        },
+        
+        "Multiple Invoice Payment Type dropdown":
+        {
+            "id": "scr-multiple-invoice-payment-type"
+        },
+        
+        "Multiple Invoice Payment Amount field":
+        {
+            "id": "scr-multiple-invoice-payment-amount"
+        },
+        
+        "Multiple Invoice Pay Now button":
+        {
+            "id": "scr-multiple-invoice-pay-now-button"
+        },
+
+        "Multiple Invoice More Pay button":
+        {
+            "id": "scr-multiple-invoice-new-more-pay-button"
+        },
+
+        "Multiple Invoice X button":
+        {
+            "xpath":  "//*[@id='scr-multiple-invoice-new-form-window']/ancestor::div[contains(@class, 'k-window')]/descendant::a[@role='button']"
+        },
+
+        "Multiple Invoice Alert No button":
+        {
+            "id":   "global-confirmation-window-no-button"
+        },
+
+        "Multiple Invoice Alert Yes button":
+        {
+            "id":   "global-confirmation-window-yes-button"
+		},
+		"Multiple Invoice Rooms":
+        {
+            "id":"scr-multiple-invoice-new-rooms"
+        },
+        
+        "Multiple Invoice Hospital Service Checkbox":
+        {
+            "id": "scr-multiple-invoice-new-inpatient-services-checkbox"
+        },
+        
+         "Multiple Invoice Hospital Service Input":
+        {
+            "id": "scr-multiple-invoice-new-inpatient-services-hospital"
+        },
+        
+        "Multiple Invoice Hospital Service Input Select First":
+        {
+            "xpath":  "//*[@id='scr-multiple-invoice-new-inpatient-services-hospital_listbox']/li[1]"
+        },
+		
+		"Multiple Invoice Services button":
+        {
+            "id":  "scr-multiple-invoice-new-services"
+        },
+		
+        "Multiple Invoice Diagnostic Imaging Services button":
+        {
+            "id":  "scr-multiple-invoice-new-services-diagnostic-imaging"
+        },
+		
+        "Multiple Invoice Anaesthetic Services button":
+        {
+            "id":  "scr-multiple-invoice-new-services-anaesthetic"
+        },
+        
+        "Multiple Invoice Item Fee Type DVA RMFS In":
+        {
+            "xpath":  "//table[@id='scr-multiple-invoice-new-grid-item']//span[@class='k-input'][contains(text(),'DVA RMFS In')]"
+        },
+        
+        "Multiple Invoice Item Fee Type DVA RMFS Out":
+        {
+            "xpath":  "//table[@id='scr-multiple-invoice-new-grid-item']//span[@class='k-input'][contains(text(),'DVA RMFS Out')]"
+        },
+        
+        "Multiple Invoice Item Fee Type DVA LMO":
+        {
+            "xpath":  "//table[@id='scr-multiple-invoice-new-grid-item']//span[@class='k-input'][contains(text(),'DVA LMO')]"
+        },
+        
+        "Multiple Invoice Item Fee Type DVA Allied":
+        {
+            "xpath":  "//table[@id='scr-multiple-invoice-new-grid-item']//span[@class='k-input'][contains(text(),'DVA Allied')]"
+        },
+        
+        "Multiple Invoice Item Fee Type DVA Medical":
+        {
+            "xpath":  "//table[@id='scr-multiple-invoice-new-grid-item']//span[@class='k-input'][contains(text(),'DVA Medical')]"
+        },
+        
+        "Multiple Invoice Item Fee Type Rebate 75":
+        {
+            "xpath":  "//table[@id='scr-multiple-invoice-new-grid-item']//span[@class='k-input'][contains(text(),'Rebate75')]"
+        },
+        
+        "Multiple Invoice Item Fee Type Rebate 85":
+        {
+            "xpath":  "//table[@id='scr-multiple-invoice-new-grid-item']//span[@class='k-input'][contains(text(),'Rebate85')]"
+        },
+        
+        "Multiple Invoice Item Fee Type Schedule":
+        {
+            "xpath":  "//table[@id='scr-multiple-invoice-new-grid-item']//span[@class='k-input'][contains(text(),'Schedule')]"
+        },
+
+        "Multiple Invoice Item Date datepick 2":
+        {
+            "xpath": "//*[@id='MRPopupWindowscr-account-multiple-invoice-new']/descendant-or-self::*[contains(normalize-space(@id), 'scr-multiple-invoice-item-date')][2]"
+        },
+
+        "Multiple Invoice Item Number field 2":
+        {
+            "xpath": "//*[@id='MRPopupWindowscr-account-multiple-invoice-new']/descendant-or-self::*[contains(normalize-space(@id), 'scr-multiple-invoice-item-no') and contains(@name, 'Item Code') and not(@disable)][2]"
+        },
+
+        "Multiple Invoice Item Number field 2 autocomplete":
+        {
+            "xpath": "//ul[@aria-hidden = 'false' and contains(@id, 'scr-multiple-invoice-item-no')]"
+        },
+
+        "Multiple Invoice Item Description field 2":
+        {
+            "xpath": "//*[@id='MRPopupWindowscr-account-multiple-invoice-new']/descendant-or-self::*[contains(normalize-space(@id), 'scr-multiple-invoice-item-desc')][2]"
+        },
+		
+		"Multiple Invoice Item Fee Type dropdown 2":
+        {
+            "xpath": "//*[@id='MRPopupWindowscr-account-multiple-invoice-new']/descendant-or-self::*[contains(normalize-space(@id), 'scr-multiple-invoice-item-fee-type')][2]"
+        },
+
+        "Multiple Invoice Item Quantity field 2":
+        {
+            "xpath":  "//*[@id='MRPopupWindowscr-account-multiple-invoice-new']/descendant-or-self::*[contains(normalize-space(@id), 'scr-multiple-invoice-item-qty')][2]"
+        },
+
+        "Multiple Invoice Item Quantity field 2 value":
+        {
+            "xpath": "//*[@id='MRPopupWindowscr-account-multiple-invoice-new']/descendant-or-self::*[contains(normalize-space(@id), 'scr-multiple-invoice-item-qty')][2]/preceding-sibling::input"
+        },
+
+        "Multiple Invoice Item Patients Number field 2":
+        {
+            "xpath": "//*/tr[contains(@id,'scr-multiple-invoice-item-row')][2]/td[7]/span[1]"
+        },
+
+        "Multiple Invoice Item Rate field 2":
+        {
+            "xpath": "//*/tr[contains(@id,'scr-multiple-invoice-item-row')][2]/td[8]/span[1]"
+        },
+
+        "Multiple Invoice Item Amount field 2":
+        {
+            "xpath": "//*/tr[contains(@id,'scr-multiple-invoice-item-row')][2]/td[9]/span[1]"
+        },
+
+        "Multiple Invoice Item Tax Type dropdown 2":
+        {
+            "xpath": "//*/tr[contains(@id,'scr-multiple-invoice-item-row')][2]/td[10]/span[1]"
+        },
+
+        "Multiple Invoice Item 2":
+        {
+            "xpath": "//*/tr[not(contains(@style,'display: none'))][2]/descendant::div[@class='row-numbering-container hide-on-hover']"
+        },
+
+        "Multiple Invoice Item Edit 2":
+        {
+            "xpath":  "//*/tr[not(contains(@style,'display: none'))][2]/td/div/div[@class='mr-custom-icon' and contains(@data-bind,'editDetailedItem')]"
+        },
+
+        "Multiple Invoice Item Total text 2":
+        {
+            "xpath":  "//*[@id='MRPopupWindowscr-account-multiple-invoice-new']/descendant-or-self::*[contains(normalize-space(@data-bind), 'totalAmountStr')][2]"
+        },
+		
+		"Multiple Invoice Detail Item Remove 1":
+        {
+            "xpath": "//*/tr[contains(@id,'scr-multiple-invoice-item-row')][1]/td[12]/div[1]"
+        },
+		
+		"Multiple Invoice Detail Item Remove 2":
+        {
+            "xpath": "//*/tr[contains(@id,'scr-multiple-invoice-item-row')][2]/td[12]/div[1]"
+        },
+		
+		"Multiple Invoice Telehealth Service checkbox":
+        {
+            "xpath": "//*[@id='scr-multiple-invoice-new-telehealth-service']/parent::label[@class='mr-checkbox']"
+        },
+		
+		"Multiple Invoice Item Patients Number Diagnostic field 2 input":
+        {
+            "xpath": "//*[@id='MRPopupWindowscr-account-multiple-invoice-new']/descendant-or-self::*[contains(normalize-space(@id), 'scr-multiple-invoice-item-no-of-patients') and @data-role='numerictextbox'][3]"
+        },
+
+        "Multiple Invoice Item Rate Diagnostic field 2":
+        {
+            "xpath": "//*[@id='scr-multiple-invoice-new-grid-item']/tr[3]/td[8]/span/span/input[1]"
+        },
+
+        "Multiple Invoice Item Amount Diagnostic field 2":
+        {
+            "xpath": "//*/tr[contains(@id,'scr-multiple-invoice-item-row')][3]/td[9]/span[1]"
+        },
+
+        "Multiple Invoice Item Tax Type Diagnostic dropdown 2":
+        {
+            "xpath": "//*/tr[contains(@id,'scr-multiple-invoice-item-row')][3]/td[10]/span[1]"
+        },
+		
+		"Multiple Invoice Item Patients Number Diagnostic field 2":
+        {
+            "xpath": "//*[@id='scr-multiple-invoice-new-grid-item']/tr[3]/td[7]/span/span/input[1]"
+        },
+
+        "Multiple Invoice Item Date datepick 3":
+        {
+            "xpath":  "//*[@id='MRPopupWindowscr-account-multiple-invoice-new']/descendant-or-self::*[contains(normalize-space(@id), 'scr-multiple-invoice-item-date')][3]"
+        },
+
+        "Multiple Invoice Item Number field 3":
+        {
+            "xpath":  "//*[@id='MRPopupWindowscr-account-multiple-invoice-new']/descendant-or-self::*[contains(normalize-space(@id), 'scr-multiple-invoice-item-no') and contains(@name, 'Item Code') and not(@disable)][3]"
+        },
+
+        "Multiple Invoice Item Date datepick 4":
+        {
+            "xpath":  "//*[@id='MRPopupWindowscr-account-multiple-invoice-new']/descendant-or-self::*[contains(normalize-space(@id), 'scr-multiple-invoice-item-date')][4]"
+        },
+
+        "Multiple Invoice Item Number field 4":
+        {
+            "xpath":  "//*[@id='MRPopupWindowscr-account-multiple-invoice-new']/descendant-or-self::*[contains(normalize-space(@id), 'scr-multiple-invoice-item-no') and contains(@name, 'Item Code') and not(@disable)][4]"
+        },
+
+        "Multiple Invoice Item Date datepick 5":
+        {
+            "xpath":  "//*[@id='MRPopupWindowscr-account-multiple-invoice-new']/descendant-or-self::*[contains(normalize-space(@id), 'scr-multiple-invoice-item-date')][5]"
+        },
+
+        "Multiple Invoice Item Number field 5":
+        {
+            "xpath":  "//*[@id='MRPopupWindowscr-account-multiple-invoice-new']/descendant-or-self::*[contains(normalize-space(@id), 'scr-multiple-invoice-item-no') and contains(@name, 'Item Code') and not(@disable)][5]"
+        },
+
+        "Multiple Invoice Item Date datepick 6":
+        {
+            "xpath":  "//*[@id='MRPopupWindowscr-account-multiple-invoice-new']/descendant-or-self::*[contains(normalize-space(@id), 'scr-multiple-invoice-item-date')][6]"
+        },
+
+        "Multiple Invoice Item Number field 7":
+        {
+            "xpath":  "//*[@id='MRPopupWindowscr-account-multiple-invoice-new']/descendant-or-self::*[contains(normalize-space(@id), 'scr-multiple-invoice-item-no') and contains(@name, 'Item Code') and not(@disable)][7]"
+        },
+
+        "Multiple Invoice Item Date datepick 8":
+        {
+            "xpath":  "//*[@id='MRPopupWindowscr-account-multiple-invoice-new']/descendant-or-self::*[contains(normalize-space(@id), 'scr-multiple-invoice-item-date')][8]"
+        },
+
+        "Multiple Invoice Item Number field 8":
+        {
+            "xpath":  "//*[@id='MRPopupWindowscr-account-multiple-invoice-new']/descendant-or-self::*[contains(normalize-space(@id), 'scr-multiple-invoice-item-no') and contains(@name, 'Item Code') and not(@disable)][8]"
+        },
+
+        "Multiple Invoice Item Date datepick 9":
+        {
+            "xpath":  "//*[@id='MRPopupWindowscr-account-multiple-invoice-new']/descendant-or-self::*[contains(normalize-space(@id), 'scr-multiple-invoice-item-date')][9]"
+        },
+
+        "Multiple Invoice Item Number field 9":
+        {
+            "xpath":  "//*[@id='MRPopupWindowscr-account-multiple-invoice-new']/descendant-or-self::*[contains(normalize-space(@id), 'scr-multiple-invoice-item-no') and contains(@name, 'Item Code') and not(@disable)][9]"
+        },
+
+        "Multiple Invoice Item Date datepick 10":
+        {
+            "xpath":  "//*[@id='MRPopupWindowscr-account-multiple-invoice-new']/descendant-or-self::*[contains(normalize-space(@id), 'scr-multiple-invoice-item-date')][10]"
+        },
+
+        "Multiple Invoice Item Number field 10":
+        {
+            "xpath":  "//*[@id='MRPopupWindowscr-account-multiple-invoice-new']/descendant-or-self::*[contains(normalize-space(@id), 'scr-multiple-invoice-item-no') and contains(@name, 'Item Code') and not(@disable)][10]"
+        },
+
+        "Multiple Invoice Item Date datepick 11":
+        {
+            "xpath":  "//*[@id='MRPopupWindowscr-account-multiple-invoice-new']/descendant-or-self::*[contains(normalize-space(@id), 'scr-multiple-invoice-item-date')][11]"
+        },
+
+        "Multiple Invoice Item Number field 11":
+        {
+            "xpath":  "//*[@id='MRPopupWindowscr-account-multiple-invoice-new']/descendant-or-self::*[contains(normalize-space(@id), 'scr-multiple-invoice-item-no') and contains(@name, 'Item Code') and not(@disable)][11]"
+        },
+
+        "Multiple Invoice Item Date datepick 12":
+        {
+            "xpath":  "//*[@id='MRPopupWindowscr-account-multiple-invoice-new']/descendant-or-self::*[contains(normalize-space(@id), 'scr-multiple-invoice-item-date')][12]"
+        },
+
+        "Multiple Invoice Item Number field 12":
+        {
+            "xpath":  "//*[@id='MRPopupWindowscr-account-multiple-invoice-new']/descendant-or-self::*[contains(normalize-space(@id), 'scr-multiple-invoice-item-no') and contains(@name, 'Item Code') and not(@disable)][12]"
+        },
+
+        "Multiple Invoice Item Date datepick 13":
+        {
+            "xpath":  "//*[@id='MRPopupWindowscr-account-multiple-invoice-new']/descendant-or-self::*[contains(normalize-space(@id), 'scr-multiple-invoice-item-date')][13]"
+        },
+
+        "Multiple Invoice Item Number field 13":
+        {
+            "xpath":  "//*[@id='MRPopupWindowscr-account-multiple-invoice-new']/descendant-or-self::*[contains(normalize-space(@id), 'scr-multiple-invoice-item-no') and contains(@name, 'Item Code') and not(@disable)][13]"
+        },
+
+        "Multiple Invoice Item Date datepick 14":
+        {
+            "xpath":  "//*[@id='MRPopupWindowscr-account-multiple-invoice-new']/descendant-or-self::*[contains(normalize-space(@id), 'scr-multiple-invoice-item-date')][14]"
+        },
+
+        "Multiple Invoice Item Number field 14":
+        {
+            "xpath":  "//*[@id='MRPopupWindowscr-account-multiple-invoice-new']/descendant-or-self::*[contains(normalize-space(@id), 'scr-multiple-invoice-item-no') and contains(@name, 'Item Code') and not(@disable)][14]"
+        },
+
+        "Multiple Invoice Item Number field autocomplete":
+        {
+            "xpath": "//ul[@aria-hidden = 'false' and contains(@id, 'scr-multiple-invoice-item-no')]"
+        },
+		
+		 "Multiple Invoice Hospital Service Input List":
+        {
+            "id": "scr-multiple-invoice-new-inpatient-services-hospital_listbox"
+        },
+		
+		"Multiple Invoice Patient information button":
+        {
+            "id": "scr-multiple-invoice-new-patient-name-tooltip"
+        },
+		
+		"Multiple Invoice Patient information popup":
+        {
+            "id": "MRPopupWindowscr-account-multiple-invoice-opv"
+        },
+		
+		"Multiple Invoice Patient information cancel button":
+        {
+            "id": "scr-account-multiple-invoice-opv--cancel"
+        },
+		
+		"Multiple Invoice Patient information OPV button":
+        {
+            "id": "scr-account-multiple-invoice-opv--send"
+        },
+		
+		"Multiple Invoice Patient information OPV check":
+        {
+            "id": "scr-account-multiple-invoice-opv-warning"
+        },		
+		
+		"Multiple Invoice Patient information OPV check sucessful":
+        {
+            "xpath": "//*[@id='scr-account-multiple-invoice-opv-warning' and contains(@data-tooltip-description,'Completed Successfully')]"
+        },
+
+        "Close button":
+        {
+            "xpath": "//*[@aria-label='Close']"
+        }
+    }
+}

@@ -42,8 +42,8 @@ const toJson = (value: string): ElementSelector => {
   }
 }
 
-const checkElementName = (element: Element): string => {
-  if (Object.keys(element)[0].toLowerCase().includes('dropdown')) {
+const checkElementName = (element: Element, domElement: string): string => {
+  if (domElement.toString().includes('dropdown')) {
     return `//*[@aria-owns='${element.id}_listbox']`
   }
   return `//*[@id='${element.id}']`
@@ -55,10 +55,18 @@ const convertObject = (elementSelector: ElementSelector) => {
   for (const domElement in elementSelector.domElements) {
     const element = elementSelector.domElements[domElement]
     data.elementSelector.domElements[_.camelCase(domElement)] = {
-      id: element.id ?? '',
-      xpath: element.id ? checkElementName(element) : element.xpath,
+      id: `#${element.id ?? ''}`,
+      xpath: element.xpath ? element.xpath : checkElementName(element, domElement),
     }
   }
+}
+
+const convertJsonToString = () => {
+  return JSON.stringify(data.elementSelector, null, 4)
+}
+
+const copyData = () => {
+  navigator.clipboard.writeText(convertJsonToString())
 }
 </script>
 
@@ -68,8 +76,9 @@ const convertObject = (elementSelector: ElementSelector) => {
     <mi-button text="convert" @click="convertObject(toJson(data.text))" />
     <div>
       <pre>
-        {{ JSON.stringify(data.elementSelector, null, 4) }}
+        {{ convertJsonToString() }}
       </pre>
     </div>
+    <mi-button text="copy" @click="copyData" />
   </div>
 </template>
