@@ -5,6 +5,9 @@ class MiToast {
   failed(message: string) {
     this.toast.error(message)
   }
+  success(message = 'Success') {
+    this.toast.success(message)
+  }
 }
 
 export default MiToast

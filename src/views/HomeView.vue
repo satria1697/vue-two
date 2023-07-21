@@ -2,6 +2,8 @@
 import { reactive } from 'vue'
 import MiButton from '@/components/global/MiButton.vue'
 import _ from 'lodash'
+import MiToast from '@/components/global/mi-toast'
+const miToast = new MiToast()
 
 interface ElementSelector {
   pageName: string
@@ -66,7 +68,12 @@ const convertJsonToString = () => {
 }
 
 const copyData = () => {
-  navigator.clipboard.writeText(convertJsonToString())
+  if (data.elementSelector.domElements.length) {
+    navigator.clipboard.writeText(convertJsonToString())
+    miToast.success()
+    return
+  }
+  miToast.failed('Empty Data')
 }
 </script>
 
@@ -79,6 +86,6 @@ const copyData = () => {
         {{ convertJsonToString() }}
       </pre>
     </div>
-    <mi-button text="copy" @click="copyData" />
+    <mi-button text="copy" @click="copyData()" />
   </div>
 </template>

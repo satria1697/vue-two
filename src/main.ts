@@ -1,4 +1,5 @@
 import './assets/main.css'
+import 'vue-toast-notification/dist/theme-default.css'
 
 import { createApp } from 'vue'
 import { createPinia } from 'pinia'
