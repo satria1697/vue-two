@@ -1,13 +1,13 @@
-import { useRouter } from 'vue-router'
+import { RouteParamsRaw, useRouter } from 'vue-router'
 
 interface NavigationPushInterface {
   name?: string
-  params?: object
+  params?: RouteParamsRaw
 }
 
 interface NavigationInterface {
   goBack: () => void
-  go: (options: NavigationPushInterface) => Future<void>
+  go: (options: NavigationPushInterface) => Promise<void>
 }
 
 class Navigation implements NavigationInterface {
@@ -15,11 +15,11 @@ class Navigation implements NavigationInterface {
   goBack() {
     this.router.back()
   }
-  go(options: NavigationPushInterface): Future<void> {
+  go(options: NavigationPushInterface): Promise<void> {
     const { name, params } = options
     return this.router.push({
       name,
-      params
+      params,
     })
   }
   getParams() {

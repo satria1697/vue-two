@@ -35,14 +35,18 @@ const toJson = (value: string): ElementSelector => {
   if (data.text) {
     return JSON.parse(value)
   }
-  return {}
+  return {
+    domElements: {},
+    pageName: '',
+    urlExtension: '',
+  }
 }
 
 const checkElementName = (element: Element): string => {
   if (Object.keys(element)[0].toLowerCase().includes('dropdown')) {
-    return `//*[@aria-owns='${qwe.id}_listbox']`
+    return `//*[@aria-owns='${element.id}_listbox']`
   }
-  return `//*[@id='${qwe.id}']`
+  return `//*[@id='${element.id}']`
 }
 
 const convertObject = (elementSelector: ElementSelector) => {
