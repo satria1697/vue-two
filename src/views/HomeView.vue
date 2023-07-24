@@ -72,7 +72,7 @@ const convertJsonToString = () => {
 }
 
 const copyData = () => {
-  if (data.elementSelector.domElements.length) {
+  if (Object.values(data.elementSelector.domElements).length) {
     navigator.clipboard.writeText(convertJsonToString())
     miToast.success()
     return
