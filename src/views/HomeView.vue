@@ -16,8 +16,9 @@ interface DOMElements {
 }
 
 interface Element {
-  id: string
-  xpath: string
+  id?: string
+  xpath?: string
+  name?: string
 }
 
 interface reactiveInterface {
@@ -47,6 +48,9 @@ const toJson = (value: string): ElementSelector => {
 const checkElementName = (element: Element, domElement: string): string => {
   if (domElement.toString().includes('dropdown')) {
     return `//*[@aria-owns='${element.id}_listbox']`
+  }
+  if (element.name) {
+    return `//*[@name='${element.name}']`
   }
   return `//*[@id='${element.id}']`
 }
@@ -81,11 +85,11 @@ const copyData = () => {
   <div class="flex flex-col space-y-4 p-10">
     <textarea v-model="data.text" class="border rounded-md"></textarea>
     <mi-button text="convert" @click="convertObject(toJson(data.text))" />
+    <mi-button text="copy" @click="copyData()" />
     <div>
       <pre>
         {{ convertJsonToString() }}
       </pre>
     </div>
-    <mi-button text="copy" @click="copyData()" />
   </div>
 </template>
