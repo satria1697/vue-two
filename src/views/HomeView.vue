@@ -56,6 +56,7 @@ const checkElementName = (element: Element, domElement: string): string => {
 }
 
 const convertObject = (elementSelector: ElementSelector) => {
+  data.elementSelector.domElements = {}
   data.elementSelector.urlExtension = elementSelector.urlExtension
   data.elementSelector.pageName = elementSelector.pageName
   for (const domElement in elementSelector.domElements) {
