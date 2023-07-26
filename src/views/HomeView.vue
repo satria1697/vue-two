@@ -8,6 +8,7 @@ const miToast = new MiToast()
 interface ElementSelector {
   pageName: string
   urlExtension: string
+  keyDomElementName: string
   domElements: DOMElements
 }
 
@@ -30,6 +31,7 @@ const data = reactive<reactiveInterface>({
   elementSelector: {
     pageName: '',
     urlExtension: '',
+    keyDomElementName: '',
     domElements: {},
   },
 })
@@ -39,9 +41,10 @@ const toJson = (value: string): ElementSelector => {
     return JSON.parse(value)
   }
   return {
-    domElements: {},
     pageName: '',
+    keyDomElementName: '',
     urlExtension: '',
+    domElements: {},
   }
 }
 
@@ -59,6 +62,7 @@ const convertObject = (elementSelector: ElementSelector) => {
   data.elementSelector.domElements = {}
   data.elementSelector.urlExtension = elementSelector.urlExtension
   data.elementSelector.pageName = elementSelector.pageName
+  data.elementSelector.keyDomElementName = elementSelector.keyDomElementName
   for (const domElement in elementSelector.domElements) {
     const element = elementSelector.domElements[domElement]
     data.elementSelector.domElements[_.camelCase(domElement)] = {
