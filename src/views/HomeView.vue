@@ -9,6 +9,7 @@ interface ElementSelector {
   pageName: string
   urlExtension: string
   keyDomElementName: string
+  isUpdated?: boolean
   domElements: DOMElements
 }
 
@@ -29,6 +30,7 @@ interface reactiveInterface {
 const data = reactive<reactiveInterface>({
   text: '',
   elementSelector: {
+    isUpdated: true,
     pageName: '',
     urlExtension: '',
     keyDomElementName: '',
@@ -42,6 +44,7 @@ const toJson = (value: string): ElementSelector => {
   }
   return {
     pageName: '',
+    isUpdated: true,
     keyDomElementName: '',
     urlExtension: '',
     domElements: {},
@@ -63,6 +66,7 @@ const convertObject = (elementSelector: ElementSelector) => {
   data.elementSelector.urlExtension = elementSelector.urlExtension
   data.elementSelector.pageName = elementSelector.pageName
   data.elementSelector.keyDomElementName = elementSelector.keyDomElementName
+  data.elementSelector.isUpdated = true
   for (const domElement in elementSelector.domElements) {
     const element = elementSelector.domElements[domElement]
     data.elementSelector.domElements[_.camelCase(domElement)] = {
@@ -88,7 +92,7 @@ const copyData = () => {
 
 <template>
   <div class="flex flex-col space-y-4 p-10">
-    <textarea v-model="data.text" class="border rounded-md"></textarea>
+    <textarea v-model="data.text" rows="5" class="border rounded-md"></textarea>
     <mi-button text="convert" @click="convertObject(toJson(data.text))" />
     <mi-button text="copy" @click="copyData()" />
     <div>
