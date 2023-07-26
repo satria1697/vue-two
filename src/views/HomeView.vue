@@ -9,6 +9,7 @@ interface ElementSelector {
   pageName: string
   urlExtension: string
   keyDomElementName: string
+  isUpdated?: boolean
   domElements: DOMElements
 }
 
@@ -29,6 +30,7 @@ interface reactiveInterface {
 const data = reactive<reactiveInterface>({
   text: '',
   elementSelector: {
+    isUpdated: true,
     pageName: '',
     urlExtension: '',
     keyDomElementName: '',
@@ -42,6 +44,7 @@ const toJson = (value: string): ElementSelector => {
   }
   return {
     pageName: '',
+    isUpdated: true,
     keyDomElementName: '',
     urlExtension: '',
     domElements: {},
@@ -63,6 +66,7 @@ const convertObject = (elementSelector: ElementSelector) => {
   data.elementSelector.urlExtension = elementSelector.urlExtension
   data.elementSelector.pageName = elementSelector.pageName
   data.elementSelector.keyDomElementName = elementSelector.keyDomElementName
+  data.elementSelector.isUpdated = true
   for (const domElement in elementSelector.domElements) {
     const element = elementSelector.domElements[domElement]
     data.elementSelector.domElements[_.camelCase(domElement)] = {
