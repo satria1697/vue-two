@@ -4,11 +4,21 @@ const router = createRouter({
   history: createWebHistory(import.meta.env.BASE_URL),
   routes: [
     {
+      path: '/normal-to-camel-view',
+      name: 'normal-to-camel',
+      component: () => import('../views/NormalToCamelView.vue'),
+    },
+    {
       path: '/',
       name: 'home',
-      component: () => import('../views/HomeView.vue')
-    }
-  ]
+      component: () => import('../views/HomeView.vue'),
+    },
+    {
+      path: '/normal-to-class-view',
+      name: 'normal-to-class',
+      component: () => import('../views/NormalToClassView.vue'),
+    },
+  ],
 })
 
 export default router
