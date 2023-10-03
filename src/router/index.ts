@@ -18,6 +18,11 @@ const router = createRouter({
       name: 'normal-to-class',
       component: () => import('../views/NormalToClassView.vue'),
     },
+    {
+      path: '/normal-to-object-view',
+      name: 'normal-to-object',
+      component: () => import('../views/NormalToObjectView.vue'),
+    },
   ],
 })
 
